@@ -1,5 +1,5 @@
 {
-  "name": "Xakki/phalcon-clockwork",
+  "name": "xakki/phalcon-clockwork",
   "description": "The clockwork extension for working with the phalcon framework. Fork  by kolesa-team/phalcon-clockwork",
   "version": "0.5.0",
   "type": "library",
