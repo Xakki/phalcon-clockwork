@@ -222,6 +222,14 @@ class Memcached extends Storage
                 throw new \Exception('Failed to authenticate with the Memcached server');
             }
         }
+        $memOptions = [];
+        foreach ($options as $k=>$v) {
+            if (is_numeric($k)) {
+                $memOptions[$k] = $v;
+            }
+        }
+        if (count($memOptions))
+            $client->setOptions($memOptions);
 
         $this->client = $client;
     }
