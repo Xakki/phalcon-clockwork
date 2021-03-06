@@ -7,6 +7,8 @@ use Phalcon\Mvc\Controller;
 
 /**
  * Class ClockworkController
+ *
+ * @property ClockworkSupport $clockwork
  */
 class ClockworkController extends Controller
 {

@@ -8,6 +8,12 @@ use Phalcon\Events\Manager;
 use Phalcon\Mvc\User\Component;
 use Phalcon\Config as PhalconConfig;
 
+/**
+ * Class ClockworkServices
+ * @package Kolesa\Clockwork
+ *
+ * @property ClockworkSupport $clockwork
+ */
 class ClockworkServices extends Component
 {
     /**

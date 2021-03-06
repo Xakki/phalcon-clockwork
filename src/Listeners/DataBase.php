@@ -38,12 +38,11 @@ class DataBase extends Base
         $profile = $this->getProfiler()->stopProfile()->getLastProfile();
         $this->addQuery($profile, $connection);
 
-        $this->getClockwork()->getTimeline()->addEvent(
-            md5($profile->getSQLStatement() . $profile->getInitialTime()),
-            $profile->getSQLStatement(),
-            $profile->getInitialTime(),
-            $profile->getFinalTime()
-        );
+        $this->getClockwork()->timeline()->create(
+            $profile->getSQLStatement(),[
+                'name' => md5($profile->getSQLStatement() . $profile->getInitialTime())
+            ]
+        )->finalize($profile->getInitialTime(), $profile->getFinalTime());
     }
 
     /**

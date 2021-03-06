@@ -16,7 +16,7 @@ class Router extends Group
     {
         $this->setPaths([
             'namespace'  => 'Kolesa\Clockwork',
-            'controller' => 'clockwork',
+            'controller' => 'Clockwork_Controller',
         ]);
 
         $prefix = Di::getDefault()->get('clockwork')->config->path('api', '/__clockwork');
