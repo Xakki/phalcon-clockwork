@@ -1,7 +1,7 @@
 {
   "name": "xakki/phalcon-clockwork",
   "description": "The clockwork extension for working with the phalcon framework. Fork  by kolesa-team/phalcon-clockwork",
-  "version": "0.5.0",
+  "version": "3.4.5.1",
   "type": "library",
   "autoload":{
     "psr-4":{
