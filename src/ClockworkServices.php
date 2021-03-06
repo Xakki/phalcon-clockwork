@@ -37,8 +37,12 @@ class ClockworkServices extends Component
     /**
      * Init Clockwork
      */
-    public function initialize(PhalconConfig $config = null)
+    public function initialize(?PhalconConfig $config = null)
     {
+        if (!$config) {
+            return;
+        }
+
         $clockwork = new ClockworkSupport($config);
 
         if (!$clockwork->isEnable()) {

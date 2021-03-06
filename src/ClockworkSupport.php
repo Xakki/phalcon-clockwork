@@ -79,7 +79,7 @@ class ClockworkSupport extends Injectable
      */
     public function isEnable()
     {
-        return $this->config->path("enable", true);
+        return $this->config->path("enable", false);
     }
 
     /**
